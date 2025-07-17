@@ -17,20 +17,19 @@ class SinglyList: public List<T>{
 
         friend std::ostream& operator<<<>(std::ostream& os, const SinglyList*);
 
-        SinglyList();//
-        SinglyList(T* arr, int size);//
-        ~SinglyList();//
-        //inherited stuff
-         Node<T>* insert(T data, int pos);//
-         int remove(T data);//
-         Node<T>* operator[](int index) const;//
+        SinglyList();
+        SinglyList(T* arr, int size);
+        ~SinglyList();
+         Node<T>* insert(T data, int pos);
+         int remove(T data);
+         Node<T>* operator[](int index) const;
          Node<T>* operator()(T* dataPtr) const;
-         int getIndexFromFront(T data) const;//
-         int getIndexFromRear(T data) const;//
-         List<T>* sort(bool order) const;//
+         int getIndexFromFront(T data) const;
+         int getIndexFromRear(T data) const;
+         List<T>* sort(bool order) const;
          Node<T>* findSmallest() const;
          Node<T>* findBiggest() const;
-         List<T>* clone() const;//
+         List<T>* clone() const;
 };
 
 #include "SinglyLinked.cpp"

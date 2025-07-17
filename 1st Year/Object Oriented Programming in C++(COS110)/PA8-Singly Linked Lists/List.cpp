@@ -34,7 +34,7 @@ bool List<T>::contains(T data) const
 
     while (nodePtr!=NULL)
     {
-        if (*nodePtr==data)//-----------derefference correct???
+        if (*nodePtr==data)
         {return true;}
         nodePtr=nodePtr->next;
     }

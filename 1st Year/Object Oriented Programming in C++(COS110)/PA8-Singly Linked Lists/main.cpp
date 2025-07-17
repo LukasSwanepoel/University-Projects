@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     std::cout<<"empty guineaList: "<<std::endl;
     std::cout<<"Wonderland: "<<&guineaList<<std::endl;
     guineaList.insert("Tweedle Dumb",0);
-    guineaList.insert("Tweedle Dee",0); /////////////////////////////////////////////////////////////////////////////////////////Index 0?
+    guineaList.insert("Tweedle Dee",0); 
     guineaList.insert("And The Other One",2);
     std::cout<<&guineaList<<std::endl;
     std::cout<<"The Other One was removed from idx "<<guineaList.remove("And The Other One")<<std::endl;

@@ -2,7 +2,6 @@
 #define SINGLY_SinglyList_CPP
 
 #include "SinglyLinked.h"
-//------------------Do I need to #include Node??
 
 template <class T>
 std::ostream &operator<<(std::ostream &os, const SinglyList<T> *sl)
@@ -24,7 +23,6 @@ std::ostream &operator<<(std::ostream &os, const SinglyList<T> *sl)
 template<class T>
 SinglyList<T>::SinglyList() : List<T>()
 {
-//Do I have the right idea?
 }
 
 template<class T>
@@ -45,7 +43,7 @@ SinglyList<T>::~SinglyList()
     Node<T>* nodePtr = this->head;
     while (nodePtr)
     {
-        this->head = (this->head)->next;//this right??
+        this->head = (this->head)->next;
         delete nodePtr;
         nodePtr = this->head;
     }
@@ -122,10 +120,6 @@ Node<T>* SinglyList<T>::operator[](int index) const
     Node<T>* nodePtr= this->head;
     int total = this->size();
     int tracker=0;
-    //|head|->| |->| |->| |->|NULL|
-    //size: 3
-    // idx     0    1    2
-    //inv idx  -3   -2   -1
 
     if (index>=total || (total+index)<0){return NULL;}
 
@@ -184,11 +178,6 @@ int SinglyList<T>::getIndexFromFront(T data) const
 template<class T>
 int SinglyList<T>::getIndexFromRear(T data) const
 {
-    //head->| |->| |->NULL
-    //idx    0    1    
-    //Ridx   1    0  
-    //size()=2
-    //Ridx= size - idx -1
     int index = getIndexFromFront(data);
     if (index==-1){return index;}
     else

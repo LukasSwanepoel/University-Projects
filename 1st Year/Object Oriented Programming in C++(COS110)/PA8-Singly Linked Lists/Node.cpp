@@ -4,7 +4,7 @@
 #include "Node.h"
 
 template<class T>
-Node<T>::Node(T data): data(data),next(NULL)//This right??
+Node<T>::Node(T data): data(data),next(NULL)
 {}
 
 template<class T>
@@ -16,7 +16,7 @@ T Node<T>::getData() const
 template<class T>
 bool Node<T>::operator==(T other) const
 {
-    return data==other;    //------------------do we compare this->data==other? Do we compare this==other directly? If so, do we derefference this?
+    return data==other;    
 }                          
 
 #endif /*NODE_CPP*/

@@ -17,7 +17,6 @@ class Node{
 
         friend std::ostream& operator<<<>(std::ostream&, const Node*);
 
-        //added stuff-----------------------------------------------------Is my header correct?
         Node<T>* next;
 
         Node(T data);
